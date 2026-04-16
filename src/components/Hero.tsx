@@ -18,12 +18,6 @@ export default function Hero() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
       <motion.div variants={container} initial="hidden" animate="show">
-        {/* Badge */}
-        <motion.div variants={item} className="inline-flex items-center gap-2 bg-[#AAFF00] border-2 border-black rounded-full px-4 py-1.5 text-sm font-bold mb-8 hard-shadow">
-          <span className="w-2 h-2 bg-black rounded-full animate-pulse" />
-          Доступний для нових проєктів
-        </motion.div>
-
         {/* Heading */}
         <motion.h1
           variants={item}
@@ -32,7 +26,7 @@ export default function Hero() {
           Розробка рішень
           <br />
           для вашого{" "}
-          <span className="bg-[#AAFF00] px-3 rounded-2xl border-2 border-black inline-block -rotate-1">
+          <span className="bg-[#ff4d6d] text-white px-3 rounded-2xl inline-block -rotate-1 shadow-sm">
             бізнесу.
           </span>
         </motion.h1>
@@ -50,19 +44,19 @@ export default function Hero() {
         <motion.div variants={item} className="flex flex-wrap gap-4">
           <motion.a
             href="#projects"
-            whileHover={{ x: -3, y: -3, boxShadow: "7px 7px 0px #000" }}
+            whileHover={{ x: -3, y: -3, boxShadow: "10px 10px 0px rgba(255,77,109,0.25)" }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 20 }}
-            className="bg-black text-white font-bold px-8 py-4 rounded-2xl border-2 border-black hard-shadow text-lg"
+            className="bg-[#ff4d6d] text-white font-bold px-8 py-4 rounded-2xl shadow-md text-lg"
           >
             Переглянути роботи →
           </motion.a>
           <motion.a
             href="#contacts"
-            whileHover={{ x: -3, y: -3, boxShadow: "7px 7px 0px #000" }}
+            whileHover={{ x: -3, y: -3, boxShadow: "10px 10px 0px rgba(255,77,109,0.18)" }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 20 }}
-            className="bg-white text-black font-bold px-8 py-4 rounded-2xl border-2 border-black hard-shadow text-lg"
+            className="bg-white text-[#111212] font-bold px-8 py-4 rounded-2xl shadow-sm text-lg"
           >
             Поговорити про проєкт
           </motion.a>

@@ -9,76 +9,75 @@ export default function CTA() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="contacts" className="max-w-6xl mx-auto px-6 py-16">
+    <section id="contacts" className="max-w-5xl mx-auto px-6 py-14">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ type: "spring", stiffness: 280, damping: 26 }}
-        className="bg-[#AAFF00] border-4 border-black rounded-3xl hard-shadow-lg p-10 md:p-16"
+        className="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-white via-[#fff1f3] to-[#ffe5e9] p-10 shadow-[0_35px_70px_rgba(17,18,18,0.08)]"
       >
-        <div className="max-w-2xl">
+        <div className="absolute right-0 top-0 h-48 w-48 -translate-x-12 translate-y-12 rounded-full bg-[#ff4d6d]/10 blur-3xl" />
+
+        <div className="relative max-w-2xl">
           <div className="text-5xl mb-6">📩</div>
-          <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight text-[#111212]">
             Маєте ідею?<br />Давайте поговоримо.
           </h2>
-          <p className="text-lg font-medium mb-8 leading-relaxed">
+          <p className="text-lg font-medium mb-8 leading-relaxed text-[#444648]">
             Відповідаю на всі питання щодо проєкту. Не знаєте з чого почати? Не
             страшно — розберемося разом. Навіть якщо у вас лише маленький лендінг —
             я з радістю допоможу.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* Email */}
             <motion.a
-              href="mailto:your@email.com"
-              whileHover={{ x: -3, y: -3, boxShadow: "7px 7px 0px #000" }}
+              href="mailto:eugen.bistrosite@gmail.com"
+              whileHover={{ x: -3, y: -3, boxShadow: "10px 10px 0px rgba(255,77,109,0.2)" }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="flex items-center gap-3 bg-black text-white font-bold px-6 py-4 rounded-2xl border-2 border-black hard-shadow"
+              className="flex items-center gap-3 bg-[#ff4d6d] text-white font-bold px-6 py-4 rounded-2xl shadow-md"
             >
               <span>✉️</span>
-              <span>your@email.com</span>
+              <span>eugen.bistrosite@gmail.com</span>
             </motion.a>
 
-            {/* Telegram */}
             <motion.a
-              href="https://t.me/yourusername"
+              href="https://t.me/0938533691"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ x: -3, y: -3, boxShadow: "7px 7px 0px #000" }}
+              whileHover={{ x: -3, y: -3, boxShadow: "10px 10px 0px rgba(255,77,109,0.2)" }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="flex items-center gap-3 bg-white text-black font-bold px-6 py-4 rounded-2xl border-2 border-black hard-shadow"
+              className="flex items-center gap-3 bg-white text-[#111212] font-bold px-6 py-4 rounded-2xl shadow-sm"
             >
               <span>✈️</span>
-              <span>@yourusername</span>
+              <span>093 853 3691</span>
             </motion.a>
           </div>
 
-          {/* Social links */}
-          <div className="flex gap-4 mt-6">
+          <div className="flex flex-wrap gap-4 mt-6">
             <motion.a
               href="#"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
-              className="w-12 h-12 bg-black text-white flex items-center justify-center rounded-xl border-2 border-black hard-shadow font-bold text-sm"
+              className="w-12 h-12 bg-[#ff4d6d] text-white flex items-center justify-center rounded-xl shadow-sm font-bold text-sm"
             >
               in
             </motion.a>
             <motion.a
               href="#"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
-              className="w-12 h-12 bg-black text-white flex items-center justify-center rounded-xl border-2 border-black hard-shadow font-bold text-sm"
+              className="w-12 h-12 bg-[#ff4d6d] text-white flex items-center justify-center rounded-xl shadow-sm font-bold text-sm"
             >
               Be
             </motion.a>
             <motion.a
               href="#"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
-              className="w-12 h-12 bg-black text-white flex items-center justify-center rounded-xl border-2 border-black hard-shadow font-bold text-sm"
+              className="w-12 h-12 bg-[#ff4d6d] text-white flex items-center justify-center rounded-xl shadow-sm font-bold text-sm"
             >
               Dr
             </motion.a>

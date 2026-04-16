@@ -8,32 +8,32 @@ const services = [
   {
     emoji: "🚀",
     title: "Landing Pages",
-    description: "Конверсійні лендінги, які продають. Від одного екрану до повноцінної сторінки — зроблю швидко і по справі.",
-    bg: "bg-[#AAFF00]",
+    description: "Конверсійні сайти з чіткою структурою та UX, що продає. Створюю сторінки, які працюють на результат.",
+    bg: "bg-[#fff0f2]",
   },
   {
     emoji: "✏️",
     title: "UI/UX Design",
-    description: "Дизайн інтерфейсів, що зручні для людей і вигідні для бізнесу. Прототипи, макети, дизайн-системи.",
-    bg: "bg-white",
+    description: "Простий і стильний дизайн, який не злітає в темряву, а працює для користувачів і бізнесу.",
+    bg: "bg-[#f8f3f5]",
   },
   {
     emoji: "📈",
     title: "SEO-стратегія",
-    description: "Аналіз та стратегія просування вашого сайту в пошукових системах. Більше органічного трафіку.",
-    bg: "bg-black text-white",
+    description: "План просування сайту, що базується на структурі, швидкості та якісному контенті.",
+    bg: "bg-[#ffe5ea]",
   },
   {
     emoji: "🔍",
     title: "Аудит сайту",
-    description: "Детальний розбір вашого сайту: UX, швидкість, SEO, контент. Отримаєте чіткий список покращень.",
-    bg: "bg-white",
+    description: "Чіткий розбір UX, швидкості та текстів з конкретними рекомендаціями.",
+    bg: "bg-[#f8f3f5]",
   },
   {
     emoji: "✍️",
     title: "Оптимізація контенту",
-    description: "Покращую тексти та структуру сторінок для кращого ранжування та зручності користувачів.",
-    bg: "bg-white",
+    description: "Покращую структуру і тексти, щоб сайт був зрозумілим і корисним для користувачів.",
+    bg: "bg-[#fff0f2]",
   },
 ];
 
@@ -59,14 +59,12 @@ function ServiceCard({
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ type: "spring", stiffness: 280, damping: 26, delay }}
-      whileHover={{ x: -3, y: -3, boxShadow: "7px 7px 0px #000" }}
-      className={`border-4 border-black rounded-3xl p-6 hard-shadow ${bg}`}
+      whileHover={{ x: -3, y: -3, boxShadow: "10px 10px 0px rgba(255,77,109,0.18)" }}
+      className={`rounded-3xl p-6 ${bg} shadow-[0_20px_40px_rgba(17,18,18,0.08)]`}
     >
       <div className="text-5xl mb-4">{emoji}</div>
-      <h3 className="text-xl font-black mb-2">{title}</h3>
-      <p className={`font-medium leading-relaxed ${bg.includes("black") ? "text-gray-300" : "text-gray-700"}`}>
-        {description}
-      </p>
+      <h3 className="text-xl font-black mb-2 text-[#111212]">{title}</h3>
+      <p className="font-medium leading-relaxed text-[#444648]">{description}</p>
     </motion.div>
   );
 }
@@ -82,7 +80,7 @@ export default function Services() {
         className="mb-10"
       >
         <h2 className="text-4xl md:text-5xl font-black mb-3">Послуги</h2>
-        <p className="text-lg font-medium text-gray-600 max-w-xl">
+        <p className="text-lg font-medium text-[#444648] max-w-xl">
           Беруся за проєкти будь-якого масштабу — від візитки до складного продукту.
           Якщо є питання — просто напишіть.
         </p>

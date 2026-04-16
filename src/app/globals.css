@@ -2,8 +2,9 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
-  --accent: #AAFF00;
+  --foreground: #111212;
+  --accent: #ff4d6d;
+  --card-bg: #f3f4f6;
 }
 
 @theme inline {
@@ -23,13 +24,13 @@ body {
 }
 
 .hard-shadow {
-  box-shadow: 4px 4px 0px #000000;
+  box-shadow: 4px 4px 0px rgba(17, 18, 18, 0.12);
 }
 
 .hard-shadow-accent {
-  box-shadow: 4px 4px 0px #AAFF00;
+  box-shadow: 4px 4px 0px rgba(255, 77, 109, 0.35);
 }
 
 .hard-shadow-lg {
-  box-shadow: 6px 6px 0px #000000;
+  box-shadow: 6px 6px 0px rgba(17, 18, 18, 0.12);
 }
