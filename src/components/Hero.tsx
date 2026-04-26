@@ -23,9 +23,9 @@ export default function Hero() {
           variants={item}
           className="text-5xl md:text-7xl font-black leading-tight tracking-tight mb-6 max-w-4xl"
         >
-          Розробка рішень
+          Розробка швидких
           <br />
-          для вашого{" "}
+          рішень для вашого{" "}
           <span className="bg-[#ff4d6d] text-white px-3 rounded-2xl inline-block -rotate-1 shadow-sm">
             бізнесу.
           </span>
@@ -34,10 +34,9 @@ export default function Hero() {
         {/* Subheading */}
         <motion.p
           variants={item}
-          className="text-xl md:text-2xl font-medium text-gray-700 max-w-2xl mb-10 leading-relaxed"
+          className="text-xl md:text-2xl font-medium text-gray-700 max-w-3xl mb-6 leading-relaxed"
         >
-          Перетворюю ідеї на круті цифрові продукти — від маленької візитки до
-          повноцінного продукту. Швидко, по справі, з душею.
+          Ви втомилися від повільних конструкторів та дорогих агенцій? Bistro-Site — це золота середина. Ми створюємо легкі, SEO-оптимізовані сайти на чистому коді за 72 години. Ви отримуєте повну власність над проектом та миттєве завантаження.
         </motion.p>
 
         {/* CTAs */}

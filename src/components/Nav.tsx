@@ -8,11 +8,11 @@ export default function Nav() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="sticky top-0 z-50 bg-white shadow-sm px-6 py-4"
+      className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm px-6 py-4"
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold tracking-tight">
-          bistro<span className="bg-[#ff4d6d] text-white px-1 rounded-md">site</span>
+        <a href="#" className="flex items-center">
+          <img src="/bistrosite-logo.png" alt="bistrosite" className="h-10" />
         </a>
 
         <nav className="hidden md:flex items-center gap-6 font-semibold text-sm text-[#111212]">

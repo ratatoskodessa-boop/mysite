@@ -6,14 +6,12 @@ import { useRef } from "react";
 
 function ProjectCard({
   title,
-  tag,
   description,
   imageSrc,
   href,
   delay = 0,
 }: {
   title: string;
-  tag: string;
   description: string;
   imageSrc?: string;
   href?: string;
@@ -44,13 +42,9 @@ function ProjectCard({
       )}
 
       <div className="p-6">
-        <span className="inline-block text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full bg-[#ff4d6d] text-white mb-3">
-          {tag}
-        </span>
         <h3 className="font-black mb-2 text-[#111212] text-xl">{title}</h3>
         <p className="font-medium text-[#444648] leading-relaxed">{description}</p>
-        <div className="mt-4 flex items-center gap-2 font-bold text-sm text-[#ff4d6d]
-          group-hover:underline">
+        <div className="mt-4 flex items-center gap-2 font-bold text-sm text-[#ff4d6d] group-hover:underline">
           Переглянути кейс <span>→</span>
         </div>
       </div>
@@ -77,21 +71,18 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <ProjectCard
           title="Klever Company"
-          tag="Custom Photoshop"
-          description="Проєкт для Klever — адаптивний сайт із чітким дизайном та зручною подачею продукту."
-          imageSrc="https://klever.company/favicon.ico"
+          description="Адаптивний сайт із чітким дизайном та зручною подачею продукту для міжнародної компанії."
+          imageSrc="/klever.png"
           href="https://klever.company/"
           delay={0}
         />
         <ProjectCard
           title="Реклама продукту"
-          tag="UI/UX Design"
           description="Яскрава сторінка з акцентом на привабливий візуал та простий шлях користувача до замовлення."
           delay={0.08}
         />
         <ProjectCard
           title="Сервісна платформа"
-          tag="Web Design"
           description="Структурований сайт для послуг, що працює на швидкість та зрозумілість."
           delay={0.16}
         />
