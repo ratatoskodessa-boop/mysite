@@ -45,7 +45,7 @@ export default function About() {
             Про мене
           </h2>
           <p className="text-lg font-medium text-[#444648] mb-4 leading-relaxed">
-          Я Я — Євген Ковальчук, продакт-дизайнер із понад 5-річним стажем. 
+          Я — Євген Ковальчук, продакт-дизайнер із понад 5-річним стажем. 
             Працюю над складними цифровими продуктами у глобальній компанії. 
             Допоможу тобі запустити та покращити власний цифровий продукт.
           </p>
@@ -74,7 +74,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <CardItem className="bg-white" delay={0}>
           <div className="text-4xl mb-4">💼</div>
-          {
+            {
       title: "Досвід",
       description: "Продукт-дизайнер у Syngenta. Переношу стандарти Big IT у малий та середній бізнес. Кожен проект — це продумана логіка та швидкість.",
       icon: <Briefcase className="w-6 h-6 text-orange-500" />
