@@ -74,28 +74,18 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <CardItem className="bg-white" delay={0}>
           <div className="text-4xl mb-4">💼</div>
-          <h3 className="text-xl font-black mb-3 text-[#111212]">Досвід</h3>
-          <p className="font-medium text-[#666]">
-            Продукт-дизайнер у Syngenta. Я працюю над складними цифровими продуктами у глобальній компанії. Весь цей досвід — від аналізу користувачів до побудови логіки — я вкладаю у кожен "Bistro-Site". Ви отримуєте не просто картинку, а продуманий інструмент.
-          </p>
-        </CardItem>
-
-        <CardItem className="bg-[#fff1f3]" delay={0.08}>
-          <div className="text-4xl mb-4">🎯</div>
-          <h3 className="text-xl font-black mb-3 text-[#111212]">Підхід</h3>
-          <p className="font-medium text-[#666]">
-            Бізнес-логіка + Дизайн. Я не використовую шаблони, які не працюють. Мій підхід — це перенесення стандартів великого IT у малий та середній бізнес. Кожне рішення на сайті має обґрунтовану мету: конверсію або впізнаваність.
-          </p>
-        </CardItem>
-
-        <CardItem className="bg-[#ff4d6d] text-white" delay={0.16}>
-          <div className="text-4xl mb-4">💬</div>
-          <h3 className="text-xl font-black mb-3">Комунікація</h3>
-          <p className="font-medium leading-relaxed">
-            Прямий зв'язок 24/7. Жодних менеджерів-посередників. Ви працюєте безпосередньо з виконавцем. Це гарантує швидкість розробки та чітке розуміння ваших завдань без "зіпсованого телефону".
-          </p>
-        </CardItem>
-      </div>
-    </section>
-  );
-}
+          {
+      title: "Досвід",
+      description: "Продукт-дизайнер у Syngenta. Переношу стандарти Big IT у малий та середній бізнес. Кожен проект — це продумана логіка та швидкість.",
+      icon: <Briefcase className="w-6 h-6 text-orange-500" />
+    },
+    {
+      title: "Підхід",
+      description: "Бізнес-логіка + Дизайн. Я не використовую шаблони. Моя мета — створити інструмент, який приносить вам прибуток за 3 дні.",
+      icon: <Zap className="w-6 h-6 text-orange-500" />
+    },
+    {
+      title: "Комунікація",
+      description: "Прямий зв'язок 24/7. Жодних менеджерів-посередників. Ви працюєте безпосередньо з виконавцем для максимальної Bistro-швидкості.",
+      icon: <MessageSquare className="w-6 h-6 text-orange-500" />
+    }
