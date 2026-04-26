@@ -27,7 +27,7 @@ export default function ScrollListener() {
       // Parallax effect for background elements
       const parallaxElements = document.querySelectorAll(".parallax-element");
       parallaxElements.forEach((element) => {
-        const speed = parseFloat(element.dataset.speed || "0.5");
+        const speed = parseFloat((element as HTMLElement).dataset.speed || "0.5");
         const yOffset = window.scrollY * speed;
         (element as HTMLElement).style.transform = `translateY(${yOffset}px)`;
       });
