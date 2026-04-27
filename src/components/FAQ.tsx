@@ -99,7 +99,7 @@ export default function FAQ() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section id="faq" className="max-w-6xl mx-auto px-6 py-16">
+    <section id="faq" className="max-w-6xl mx-auto px-6 py-16 bg-[#fff1f3]">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ export default function FAQ() {
         </p>
       </motion.div>
 
-      <div className="bg-[#fff1f3] rounded-2xl border border-[#ffe5ea] p-6 md:p-8">
+      <div className="rounded-2xl border border-[#ffe5ea] p-6 md:p-8 bg-white shadow-sm">
         {faqItems.map((item, index) => (
           <FAQItem
             key={index}

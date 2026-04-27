@@ -3,23 +3,37 @@
 import { useEffect, useState } from "react";
 
 export default function ScrollListener() {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
       // Get Services section element
       const servicesSection = document.getElementById("services");
-      const faqSection = document.getElementById("faq");
+      const footerSection = document.querySelector("footer");
 
-      if (!servicesSection || !faqSection) return;
+      if (!servicesSection || !footerSection) return;
 
       const servicesRect = servicesSection.getBoundingClientRect();
-      const faqRect = faqSection.getBoundingClientRect();
+      const footerRect = footerSection.getBoundingClientRect();
 
-      // Calculate scroll position relative to Services section
-      const scrollProgress = Math.max(0, -servicesRect.bottom / window.innerHeight);
+      // Calculate scroll progress from Services end to Footer start
+      const servicesBottom = servicesRect.bottom;
+      const footerTop = footerRect.top;
       
-      // If scrolled past Services, add pink background
-      if (scrollProgress > 0) {
-        document.body.classList.add("bg-pink");
+      // If scrolled past Services section, begin pink background transition
+      if (servicesBottom <= window.innerHeight) {
+        // We're at or past the Services section end
+        // Calculate progress from Services to Footer
+        const triggerPoint = window.innerHeight; // When Services bottom reaches viewport top
+        const progress = Math.max(0, Math.min(1, (triggerPoint - servicesBottom) / (footerTop - triggerPoint)));
+        
+        setScrollProgress(progress);
+        
+        if (progress > 0) {
+          document.body.classList.add("bg-pink");
+        } else {
+          document.body.classList.remove("bg-pink");
+        }
       } else {
         document.body.classList.remove("bg-pink");
       }
@@ -34,6 +48,9 @@ export default function ScrollListener() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    // Call once on mount to set initial state
+    handleScroll();
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
