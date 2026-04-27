@@ -54,7 +54,7 @@ export default function About() {
           </div>
           <h3 className="text-xl font-bold mb-2">Досвід</h3>
           <p className="text-sm text-gray-600">
-            Продукт-дизайнер у Syngenta. Переношу стандарти Big IT у малий та середній бізнес.
+            Весь цей досвід — від аналізу користувачів до побудови логіки — я вкладаю у кожен "Bistro-Site". Ви отримуєте не просто картинку, а продуманий інструмент.
           </p>
         </CardItem>
 
