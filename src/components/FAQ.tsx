@@ -109,7 +109,6 @@ export default function FAQ() {
       >
         <h2 className="text-5xl md:text-6xl font-black mb-4">🤔 Поширені питання (FAQ)</h2>
         <p className="text-lg font-medium text-[#666]">
-          Тут відповіді на питання, які найчастіше розпитують. Якщо ваше питання тут не знайшло — напишіть мені у Telegram.
         </p>
       </motion.div>
 
