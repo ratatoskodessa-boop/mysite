@@ -107,85 +107,62 @@ a:hover .emoji {
   animation: jiggle 0.5s ease-out;
 }
 
-/* ==================== PARALLAX ELEMENTS (Claymorphism) ==================== */
+/* ==================== PARALLAX ELEMENTS (Emoji) ==================== */
 
-/* Base parallax element styling */
-.parallax-element {
+/* Base parallax emoji styling */
+.parallax-emoji {
   position: fixed;
   pointer-events: none;
-  opacity: 0.12;
+  opacity: 0.25;
   z-index: 1;
-  filter: blur(0.5px);
   transition: opacity 0.3s ease-out;
   will-change: transform;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Prevent parallax elements from showing on mobile */
 @media (max-width: 768px) {
-  .parallax-element {
+  .parallax-emoji {
     display: none;
   }
 }
 
-/* Gavel Shape - Lawyer/Legal */
-.parallax-element.gavel {
-  width: 150px;
-  height: 150px;
-  top: 10%;
+/* Gardener - Top Left */
+.parallax-emoji.gardener {
+  top: 15%;
   left: 5%;
-  background: linear-gradient(135deg, #b8956a 0%, #8b7355 50%, #6b5d4f 100%);
-  border-radius: 25px;
-  box-shadow: 
-    -8px -8px 16px rgba(255, 255, 255, 0.4),
-    8px 8px 20px rgba(139, 115, 85, 0.3),
-    inset -2px -2px 8px rgba(255, 255, 255, 0.3),
-    inset 2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 4.5rem;
 }
 
-/* Shopping Bag - E-commerce */
-.parallax-element.shopping-bag {
-  width: 120px;
-  height: 140px;
-  top: 40%;
+/* Lawyer - Right Side */
+.parallax-emoji.lawyer {
+  top: 30%;
   right: 8%;
-  background: linear-gradient(135deg, #ff8fa3 0%, #ff6b6b 50%, #ff5252 100%);
-  border-radius: 20px;
-  box-shadow: 
-    -8px -8px 16px rgba(255, 255, 255, 0.4),
-    8px 8px 20px rgba(255, 107, 107, 0.3),
-    inset -2px -2px 8px rgba(255, 255, 255, 0.3),
-    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 5rem;
 }
 
-/* Wrench - Service Station/Repair */
-.parallax-element.wrench {
-  width: 100px;
-  height: 100px;
-  bottom: 20%;
-  left: 10%;
-  background: linear-gradient(135deg, #6ba3d4 0%, #4a90e2 50%, #357abd 100%);
-  border-radius: 50%;
-  box-shadow: 
-    -6px -6px 14px rgba(255, 255, 255, 0.4),
-    6px 6px 16px rgba(74, 144, 226, 0.3),
-    inset -2px -2px 8px rgba(255, 255, 255, 0.3),
-    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+/* Runner - Bottom Left */
+.parallax-emoji.runner {
+  bottom: 25%;
+  left: 12%;
+  font-size: 4.8rem;
 }
 
-/* Heart - Care/Health/Love */
-.parallax-element.heart {
-  width: 80px;
-  height: 80px;
-  top: 60%;
+/* Artist - Right Bottom */
+.parallax-emoji.artist {
+  bottom: 15%;
   right: 5%;
-  background: linear-gradient(135deg, #ff8fa3 0%, #ff4d6d 50%, #ff1744 100%);
-  border-radius: 30px;
-  transform: rotate(45deg);
-  box-shadow: 
-    -6px -6px 14px rgba(255, 255, 255, 0.4),
-    6px 6px 16px rgba(255, 77, 109, 0.3),
-    inset -2px -2px 8px rgba(255, 255, 255, 0.3),
-    inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 5.2rem;
+}
+
+/* Engineer - Center Left */
+.parallax-emoji.engineer {
+  top: 60%;
+  left: 8%;
+  font-size: 4.6rem;
 }
 
 .hard-shadow {

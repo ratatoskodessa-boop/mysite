@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function ParallaxElements() {
   useEffect(() => {
     const handleScroll = () => {
-      const elements = document.querySelectorAll(".parallax-element");
+      const elements = document.querySelectorAll(".parallax-emoji");
       
       elements.forEach((element) => {
         const speed = parseFloat((element as HTMLElement).dataset.speed || "0.3");
@@ -20,11 +20,12 @@ export default function ParallaxElements() {
 
   return (
     <>
-      {/* Parallax Background Elements */}
-      <div className="parallax-element gavel" data-speed="0.3" />
-      <div className="parallax-element shopping-bag" data-speed="0.4" />
-      <div className="parallax-element wrench" data-speed="0.35" />
-      <div className="parallax-element heart" data-speed="0.45" />
+      {/* Parallax Emoji Elements */}
+      <div className="parallax-emoji gardener" data-speed="0.3">👨‍🌾</div>
+      <div className="parallax-emoji lawyer" data-speed="0.4">👨‍⚖️</div>
+      <div className="parallax-emoji runner" data-speed="0.35">🏃</div>
+      <div className="parallax-emoji artist" data-speed="0.45">🎨</div>
+      <div className="parallax-emoji engineer" data-speed="0.38">👨‍🔧</div>
     </>
   );
 }
