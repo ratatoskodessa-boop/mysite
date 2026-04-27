@@ -1,18 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Briefcase, Zap, MessageSquare } from "lucide-react";
 
-function CardItem({
-  children,
-  className = "",
-  delay = 0,
-}: {
+interface CardItemProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-}) {
+}
+
+function CardItem({ children, className = "", delay = 0 }: CardItemProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -41,51 +39,44 @@ export default function About() {
         className="mb-12 flex flex-col md:flex-row gap-8 items-center"
       >
         <div className="flex-1">
-          <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-            Про мене
-          </h2>
-          <p className="text-lg font-medium text-[#444648] mb-4 leading-relaxed">
-          Я — Євген Ковальчук, продакт-дизайнер із понад 5-річним стажем. 
-            Працюю над складними цифровими продуктами у глобальній компанії. 
-            Допоможу тобі запустити та покращити власний цифровий продукт.
-          </p>
-        </div>
-        
-        <div className="flex-1 flex justify-center">
-          <div className="relative w-64 h-80">
-            <div className="absolute inset-0 rounded-full bg-[#e8d4c4] opacity-60"></div>
-            <div className="absolute inset-2 rounded-full bg-[#f0e0d0] opacity-80"></div>
-            <img 
-              src="/profile.png" 
-              alt="Eugene" 
-              className="w-full h-full object-cover rounded-full shadow-lg relative z-10"
-            />
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-4 -right-4 text-5xl z-20"
-            >
-              ✨
-            </motion.div>
-          </div>
+           <h2 className="text-3xl font-bold">Про мене</h2>
         </div>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <CardItem className="bg-white" delay={0}>
           <div className="text-4xl mb-4">💼</div>
-            {
-      title: "Досвід",
-      description: "Продукт-дизайнер у Syngenta. Переношу стандарти Big IT у малий та середній бізнес. Кожен проект — це продумана логіка та швидкість.",
-      icon: <Briefcase className="w-6 h-6 text-orange-500" />
-    },
-    {
-      title: "Підхід",
-      description: "Бізнес-логіка + Дизайн. Я не використовую шаблони. Моя мета — створити інструмент, який приносить вам прибуток за 3 дні.",
-      icon: <Zap className="w-6 h-6 text-orange-500" />
-    },
-    {
-      title: "Комунікація",
-      description: "Прямий зв'язок 24/7. Жодних менеджерів-посередників. Ви працюєте безпосередньо з виконавцем для максимальної Bistro-швидкості.",
-      icon: <MessageSquare className="w-6 h-6 text-orange-500" />
-    }
+          <div className="mb-4">
+            <Briefcase className="w-6 h-6 text-orange-500" />
+          </div>
+          <h3 className="text-xl font-bold mb-2">Досвід</h3>
+          <p className="text-sm text-gray-600">
+            Продукт-дизайнер у Syngenta. Переношу стандарти Big IT у малий та середній бізнес.
+          </p>
+        </CardItem>
+
+        <CardItem className="bg-white" delay={0.1}>
+          <div className="text-4xl mb-4">⚡</div>
+          <div className="mb-4">
+            <Zap className="w-6 h-6 text-orange-500" />
+          </div>
+          <h3 className="text-xl font-bold mb-2">Підхід</h3>
+          <p className="text-sm text-gray-600">
+            Бізнес-логіка + Дизайн. Я не використовую шаблони, а створюю інструменти для прибутку.
+          </p>
+        </CardItem>
+
+        <CardItem className="bg-white" delay={0.2}>
+          <div className="text-4xl mb-4">💬</div>
+          <div className="mb-4">
+            <MessageSquare className="w-6 h-6 text-orange-500" />
+          </div>
+          <h3 className="text-xl font-bold mb-2">Комунікація</h3>
+          <p className="text-sm text-gray-600">
+            Прямий зв'язок 24/7. Працюєте безпосередньо з виконавцем для максимальної швидкості.
+          </p>
+        </CardItem>
+      </div>
+    </section>
+  );
+}
