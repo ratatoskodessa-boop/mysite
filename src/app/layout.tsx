@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import ScrollListener from "@/components/ScrollListener";
-import ParallaxElements from "@/components/ParallaxElements";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -23,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="uk" className={`${spaceGrotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white font-[var(--font-space-grotesk)]">
-        <ParallaxElements />
         <ScrollListener />
         {children}
       </body>

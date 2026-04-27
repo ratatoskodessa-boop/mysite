@@ -60,12 +60,9 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 280, damping: 26 }}
-        className="flex flex-col md:flex-row items-start justify-between gap-4 mb-10"
+        className="mb-10"
       >
         <h2 className="text-4xl md:text-5xl font-black">Проєкти</h2>
-        <a href="#" className="font-bold text-[#ff4d6d] hidden md:inline-block">
-          Всі роботи →
-        </a>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

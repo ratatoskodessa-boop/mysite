@@ -86,9 +86,8 @@ export default function Services() {
         className="mb-10"
       >
         <h2 className="text-4xl md:text-5xl font-black mb-3">Послуги</h2>
-        <p className="text-lg font-medium text-[#444648] max-w-xl">
-          Беруся за проєкти будь-якого масштабу — від візитки до складного продукту.
-          Якщо є питання — просто напишіть.
+        <p className="text-lg font-medium text-[#444648] max-w-3xl">
+          Я не просто створюю сайт — за потреби я допоможу з налаштуванням хостингу, придбанням домену, SEO-оптимізацією та аналітикою.
         </p>
       </motion.div>
 

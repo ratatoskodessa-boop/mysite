@@ -28,9 +28,10 @@ export default function Footer() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400 }}
-              className="inline-flex mt-4 text-2xl"
+              className="inline-flex items-center gap-2 mt-4"
             >
-              📷
+              <span className="text-2xl">🖼️</span>
+              <span className="text-sm font-medium">Instagram</span>
             </motion.a>
           </div>
           
@@ -67,21 +68,10 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
-          <div className="flex justify-end">
-            <motion.a
-              href="#"
-              whileHover={{ y: -4 }}
-              className="text-sm font-bold text-[#ff4d6d] hover:underline underline-offset-4"
-            >
-              Вгору ↑
-            </motion.a>
-          </div>
         </div>
         
-        <div className="flex justify-between items-center text-xs text-[#999]">
-          <span>© {new Date().getFullYear()} bistrosite. Розроблено з ❤️ в Україні</span>
-          <span>Bropy ↑</span>
+        <div className="text-center text-xs text-[#999]">
+          <span>© 2026 bistrosite. Розроблено з ❤️ в Україні</span>
         </div>
       </div>
     </footer>
