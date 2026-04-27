@@ -1,6 +1,23 @@
 "use client";
 
+import { useEffect } from "react";
+
 export default function ParallaxElements() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".parallax-element");
+      
+      elements.forEach((element) => {
+        const speed = parseFloat((element as HTMLElement).dataset.speed || "0.3");
+        const yPos = window.scrollY * speed;
+        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       {/* Parallax Background Elements */}
