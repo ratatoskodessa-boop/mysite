@@ -40,6 +40,9 @@ export default function About() {
       >
         <div className="flex-1">
            <h2 className="text-3xl font-bold">Про мене</h2>
+           <p className="text-lg text-gray-600 mt-4">
+             Я — Євген Ковальчук, продакт-дизайнер із понад 5-річним стажем. Працюю над складними цифровими продуктами у глобальній компанії.
+           </p>
         </div>
       </motion.div>
 
