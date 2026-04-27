@@ -45,14 +45,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="relative">
-          <img
-            src="/profile.png"
-            alt="Profile"
-            className="w-64 h-64 rounded-3xl object-cover shadow-lg"
-          />
-          <div className="absolute top-4 right-4 text-4xl">✨</div>
-        </div>
+        
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
