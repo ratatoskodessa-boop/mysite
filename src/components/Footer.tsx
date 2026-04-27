@@ -22,6 +22,16 @@ export default function Footer() {
             <p className="text-sm text-[#666] font-medium mt-2">
               Розробка рішень для вашого бізнесу
             </p>
+            <motion.a
+              href="https://www.instagram.com/bistrosite/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400 }}
+              className="inline-flex mt-4 text-2xl"
+            >
+              📷
+            </motion.a>
           </div>
           
           <div>
