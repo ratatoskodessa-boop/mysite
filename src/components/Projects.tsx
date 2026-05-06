@@ -76,6 +76,8 @@ export default function Projects() {
         <ProjectCard
           title="Юридична консультація"
           description="Сучасний односторінковий сайт-візитка для персонального бренду адвоката."
+          imageSrc="/lawer.png"
+          href="https://lawyer-five-xi.vercel.app/"
           delay={0.08}
         />
         <ProjectCard
