@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import ScrollListener from "@/components/ScrollListener";
+import Script from "next/script";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -78,6 +79,18 @@ export default function RootLayout({
   return (
     <html lang="uk" className={`${spaceGrotesk.variable} h-full antialiased`}>
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6KVEEMSXT9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6KVEEMSXT9');
+          `}
+        </Script>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
