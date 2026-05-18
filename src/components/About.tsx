@@ -30,7 +30,7 @@ function CardItem({ children, className = "", delay = 0 }: CardItemProps) {
 export default function About() {
   return (
     <section id="about" className="max-w-6xl mx-auto px-6 py-16">
-      <h2 className="text-4xl font-black mb-12">Про мене</h2>
+      <h2 className="text-4xl font-black">Про мене</h2>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
