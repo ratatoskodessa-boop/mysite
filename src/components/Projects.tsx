@@ -83,6 +83,8 @@ export default function Projects() {
         <ProjectCard
           title="Портфоліо таргетолога"
           description="Стильний односторінковий сайт для агенції системного таргетингу, орієнтований на залучення нових клієнтів."
+          imageSrc="/mads-case.png"
+          href="https://mads-portfolio-liard.vercel.app/"
           delay={0.16}
         />
       </div>
