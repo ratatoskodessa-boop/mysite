@@ -61,10 +61,10 @@ export default function Footer() {
                 eugen.bistrosite@gmail.com
               </a>
               <a 
-                href="tel:+380938533691"
+                href="tel:+380965137746"
                 className="text-sm text-[#666] hover:text-[#ff4d6d] transition-colors"
               >
-                +380 93 853 3691
+                +380 96 513 7746
               </a>
             </div>
           </div>
