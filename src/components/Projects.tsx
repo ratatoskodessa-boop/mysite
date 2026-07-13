@@ -65,18 +65,18 @@ export default function Projects() {
         <h2 className="text-4xl md:text-5xl font-black">Проєкти</h2>
       </motion.div>
 {/* Контейнер слайдера з кнопками */}
-      <div className="relative group">
+      <div className="relative group w-full mt-8">
         
         {/* Кнопка "Вліво" */}
         <button 
           onClick={() => {
             const slider = document.getElementById('projects-slider');
-            if (slider) slider.scrollBy({ left: -350, behavior: 'smooth' });
+            if (slider) slider.scrollBy({ left: -400, behavior: 'smooth' });
           }}
-          className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-50 hidden md:block"
+          className="absolute -left-5 top-1/3 z-10 bg-white shadow-xl border border-gray-100 rounded-full p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-50 hidden md:block"
           aria-label="Попередній проєкт"
         >
-          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
@@ -84,15 +84,12 @@ export default function Projects() {
         {/* Сама стрічка проєктів */}
         <div 
           id="projects-slider"
-          className="flex overflow-x-auto gap-6 scrollbar-hide scroll-smooth pb-4 px-2 -mx-2"
-          style={{ 
-            scrollbarWidth: 'none', /* Firefox */
-            msOverflowStyle: 'none', /* IE/Edge */
-          }}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-6 scrollbar-hide scroll-smooth pb-10 px-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {/* Щоб прибрати скролбар у Chrome/Safari, стилі scrollbar-hide додамо нижче */}
           
-          <div className="min-w-[280px] md:min-w-[350px] flex-shrink-0">
+          {/* ПРОЄКТ 1 */}
+          <div className="w-[85vw] sm:w-[350px] md:w-[400px] shrink-0 snap-center">
             <ProjectCard
               title="Klever Company"
               description="Адаптивний сайт із чітким дизайном та зручною подачею продукту для міжнародної компанії."
@@ -102,7 +99,8 @@ export default function Projects() {
             />
           </div>
 
-          <div className="min-w-[280px] md:min-w-[350px] flex-shrink-0">
+          {/* ПРОЄКТ 2 */}
+          <div className="w-[85vw] sm:w-[350px] md:w-[400px] shrink-0 snap-center">
             <ProjectCard
               title="Юридична консультація"
               description="Сучасний односторінковий сайт-візитка для персонального бренду адвоката."
@@ -112,7 +110,8 @@ export default function Projects() {
             />
           </div>
 
-          <div className="min-w-[280px] md:min-w-[350px] flex-shrink-0">
+          {/* ПРОЄКТ 3 */}
+          <div className="w-[85vw] sm:w-[350px] md:w-[400px] shrink-0 snap-center">
             <ProjectCard
               title="Портфоліо таргетолога"
               description="Стильний односторінковий сайт для агенції системного таргетингу, орієнтований на залучення нових клієнтів."
@@ -122,12 +121,12 @@ export default function Projects() {
             />
           </div>
 
-          {/* НАШ НОВИЙ 4-Й ПРОЄКТ */}
-          <div className="min-w-[280px] md:min-w-[350px] flex-shrink-0">
+          {/* ПРОЄКТ 4 (SYNTHESIS) */}
+          <div className="w-[85vw] sm:w-[350px] md:w-[400px] shrink-0 snap-center">
             <ProjectCard
               title="Synthesis"
               description="Інтерактивне та мінімалістичне цифрове портфоліо з фокусом на плавну взаємодію та UX."
-              imageSrc="/synthesis.png" // Переконайся, що скріншот лежить в /public/synthesis.png
+              imageSrc="/synthesis.png"
               href="https://synthesis-portfolio-omega.vercel.app/"
               delay={0.24}
             />
@@ -139,17 +138,17 @@ export default function Projects() {
         <button 
           onClick={() => {
             const slider = document.getElementById('projects-slider');
-            if (slider) slider.scrollBy({ left: 350, behavior: 'smooth' });
+            if (slider) slider.scrollBy({ left: 400, behavior: 'smooth' });
           }}
-          className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-50 hidden md:block"
+          className="absolute -right-5 top-1/3 z-10 bg-white shadow-xl border border-gray-100 rounded-full p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-50 hidden md:block"
           aria-label="Наступний проєкт"
         >
-          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
- </div>
+      </div>
    </section>
   );
 }
