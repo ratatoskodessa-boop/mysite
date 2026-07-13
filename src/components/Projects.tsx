@@ -149,6 +149,7 @@ export default function Projects() {
           </svg>
         </button>
 
-      </div>
+ </div>
+   </section>
   );
 }
