@@ -119,9 +119,9 @@ export default function Projects() {
             />
           </div>
 
-        </div>
+     </div> {/* Це кінець стрічки проєктів */}
 
-        {/* Кнопка "Вправо" */}
+        {/* Кнопка "Вправо" (Десктопна) */}
         <button 
           onClick={() => {
             const slider = document.getElementById('projects-slider');
@@ -135,7 +135,36 @@ export default function Projects() {
           </svg>
         </button>
 
+        {/* НОВИЙ БЛОК: Мобільні/Планшетні кнопки навігації (внизу зліва) */}
+        <div className="flex items-center gap-3 mt-6 px-4 md:hidden">
+          <button 
+            onClick={() => {
+              const slider = document.getElementById('projects-slider');
+              if (slider) slider.scrollBy({ left: -350, behavior: 'smooth' });
+            }}
+            className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-gray-100 active:bg-gray-200 transition-colors"
+            aria-label="Попередній проєкт"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <button 
+            onClick={() => {
+              const slider = document.getElementById('projects-slider');
+              if (slider) slider.scrollBy({ left: 350, behavior: 'smooth' });
+            }}
+            className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-500 hover:bg-gray-100 active:bg-gray-200 transition-colors"
+            aria-label="Наступний проєкт"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
       </div>
-   </section>
+    </section>
   );
 }
