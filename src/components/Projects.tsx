@@ -64,30 +64,91 @@ export default function Projects() {
       >
         <h2 className="text-4xl md:text-5xl font-black">Проєкти</h2>
       </motion.div>
+{/* Контейнер слайдера з кнопками */}
+      <div className="relative group">
+        
+        {/* Кнопка "Вліво" */}
+        <button 
+          onClick={() => {
+            const slider = document.getElementById('projects-slider');
+            if (slider) slider.scrollBy({ left: -350, behavior: 'smooth' });
+          }}
+          className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-50 hidden md:block"
+          aria-label="Попередній проєкт"
+        >
+          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <ProjectCard
-          title="Klever Company"
-          description="Адаптивний сайт із чітким дизайном та зручною подачею продукту для міжнародної компанії."
-          imageSrc="/klever.png"
-          href="https://klever.company/"
-          delay={0}
-        />
-        <ProjectCard
-          title="Юридична консультація"
-          description="Сучасний односторінковий сайт-візитка для персонального бренду адвоката."
-          imageSrc="/lawer.png"
-          href="https://lawyer-five-xi.vercel.app/"
-          delay={0.08}
-        />
-        <ProjectCard
-          title="Портфоліо таргетолога"
-          description="Стильний односторінковий сайт для агенції системного таргетингу, орієнтований на залучення нових клієнтів."
-          imageSrc="/mads-case.png"
-          href="https://mads-portfolio-liard.vercel.app/"
-          delay={0.16}
-        />
+        {/* Сама стрічка проєктів */}
+        <div 
+          id="projects-slider"
+          className="flex overflow-x-auto gap-6 scrollbar-hide scroll-smooth pb-4 px-2 -mx-2"
+          style={{ 
+            scrollbarWidth: 'none', /* Firefox */
+            msOverflowStyle: 'none', /* IE/Edge */
+          }}
+        >
+          {/* Щоб прибрати скролбар у Chrome/Safari, стилі scrollbar-hide додамо нижче */}
+          
+          <div className="min-w-[280px] md:min-w-[350px] flex-shrink-0">
+            <ProjectCard
+              title="Klever Company"
+              description="Адаптивний сайт із чітким дизайном та зручною подачею продукту для міжнародної компанії."
+              imageSrc="/klever.png"
+              href="https://klever.company/"
+              delay={0}
+            />
+          </div>
+
+          <div className="min-w-[280px] md:min-w-[350px] flex-shrink-0">
+            <ProjectCard
+              title="Юридична консультація"
+              description="Сучасний односторінковий сайт-візитка для персонального бренду адвоката."
+              imageSrc="/lawer.png"
+              href="https://lawyer-five-xi.vercel.app/"
+              delay={0.08}
+            />
+          </div>
+
+          <div className="min-w-[280px] md:min-w-[350px] flex-shrink-0">
+            <ProjectCard
+              title="Портфоліо таргетолога"
+              description="Стильний односторінковий сайт для агенції системного таргетингу, орієнтований на залучення нових клієнтів."
+              imageSrc="/mads-case.png"
+              href="https://mads-portfolio-liard.vercel.app/"
+              delay={0.16}
+            />
+          </div>
+
+          {/* НАШ НОВИЙ 4-Й ПРОЄКТ */}
+          <div className="min-w-[280px] md:min-w-[350px] flex-shrink-0">
+            <ProjectCard
+              title="Synthesis"
+              description="Інтерактивне та мінімалістичне цифрове портфоліо з фокусом на плавну взаємодію та UX."
+              imageSrc="/synthesis.png" // Переконайся, що скріншот лежить в /public/synthesis.png
+              href="https://synthesis-portfolio-omega.vercel.app/"
+              delay={0.24}
+            />
+          </div>
+
+        </div>
+
+        {/* Кнопка "Вправо" */}
+        <button 
+          onClick={() => {
+            const slider = document.getElementById('projects-slider');
+            if (slider) slider.scrollBy({ left: 350, behavior: 'smooth' });
+          }}
+          className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg border border-gray-100 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gray-50 hidden md:block"
+          aria-label="Наступний проєкт"
+        >
+          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
       </div>
-    </section>
   );
 }
