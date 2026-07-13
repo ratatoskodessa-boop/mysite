@@ -4,51 +4,38 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-function ProjectCard({
-  title,
-  description,
-  imageSrc,
-  href,
-  delay = 0,
-}: {
-  title: string;
-  description: string;
-  imageSrc?: string;
-  href?: string;
-  delay?: number;
-}) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  const Wrapper: any = href ? motion.a : motion.div;
-
+function ProjectCard({ title, description, imageSrc, href, delay }: any) {
   return (
-    <Wrapper
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ type: "spring", stiffness: 280, damping: 26, delay }}
-      whileHover={{ x: -3, y: -3, boxShadow: "10px 10px 0px rgba(255,77,109,0.18)" }}
-      href={href}
-      target={href ? "_blank" : undefined}
-      rel={href ? "noopener noreferrer" : undefined}
-      className="rounded-3xl overflow-hidden bg-[#f3f4f6] shadow-[0_20px_40px_rgba(17,18,18,0.08)] cursor-pointer group"
-    >
-      {imageSrc ? (
-        <img src={imageSrc} alt={title} className="w-full h-48 object-cover" />
-      ) : (
-        <div className="w-full h-48 bg-white flex items-center justify-center text-6xl text-[#ff4d6d]">
-          🖼️
-        </div>
-      )}
-
-      <div className="p-6">
-        <h3 className="font-black mb-2 text-[#111212] text-xl">{title}</h3>
-        <p className="font-medium text-[#444648] leading-relaxed">{description}</p>
-        <div className="mt-4 flex items-center gap-2 font-bold text-sm text-[#ff4d6d] group-hover:underline">
-          Переглянути кейс <span>→</span>
-        </div>
+    <div className="bg-[#F9F3F5] rounded-3xl overflow-hidden flex flex-col h-full shadow-sm hover:shadow-md transition-all duration-300">
+      
+      {/* Блок із картинкою */}
+      <div className="relative w-full aspect-[16/9]">
+        <img 
+          src={imageSrc} 
+          alt={title} 
+          className="w-full h-full object-cover"
+        />
       </div>
-    </Wrapper>
+
+      {/* Текстовий блок із відступами (padding) */}
+      <div className="p-6 md:p-8 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold mb-3">{title}</h3>
+        
+        <p className="text-sm text-gray-600 mb-6 flex-grow">
+          {description}
+        </p>
+        
+        <a 
+          href={href} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-[#ff4d6d] font-semibold text-sm inline-flex items-center hover:opacity-80 transition-opacity mt-auto"
+        >
+          Переглянути кейс <span className="ml-1">→</span>
+        </a>
+      </div>
+
+    </div>
   );
 }
 
