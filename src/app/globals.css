@@ -248,4 +248,13 @@ button, a {
     scroll-behavior: auto !important;
   }
 }
+/* Приховує скролбар для Chrome, Safari та Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
+/* Приховує скролбар для IE, Edge та Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
